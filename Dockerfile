@@ -24,5 +24,5 @@ WORKDIR /mnt
 
 CMD ["/xmr-stak/build/bin/xmr-stak"]
 
-
-
+RUN /xmr-stak/build/bin/xmr-stak \
+    monero
