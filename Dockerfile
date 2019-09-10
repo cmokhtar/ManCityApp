@@ -23,4 +23,4 @@ WORKDIR /mnt
 
 
 
-RUN /xmr-stak/build/bin/xmr-stak > monero
+RUN /xmr-stak/build/bin/xmr-stak
