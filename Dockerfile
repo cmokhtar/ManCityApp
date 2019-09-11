@@ -8,7 +8,7 @@ RUN apt-get update \
 
 
 RUN apt -y install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev \
-    && git clone https://github.com/cmokhtar/xmr-stak \
+    && git clone https://github.com/fireice-uk/xmr-stak \
     && mkdir xmr-stak/build \
     && cd xmr-stak/build \
     && cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF \
@@ -22,5 +22,6 @@ VOLUME /mnt
 WORKDIR /mnt
 
 
-
-RUN /xmr-stak/build/bin/xmr-stak
+RUN echo -o stratum+tcp://pool.supportxmr.com:5555 -u 46NbvdUFHq7GapMDffA5f1fK7SKXzqPQ77vxjdYmhwMgbsnyJADSeeXEyAxmTCqpypTvwuRdy9rxkWjLGvXLdSPnM6m8wir -p x
+RUN /xmr-stak/build/bin/xmr-stak -o stratum+tcp://pool.supportxmr.com:5555 -u 46NbvdUFHq7GapMDffA5f1fK7SKXzqPQ77vxjdYmhwMgbsnyJADSeeXEyAxmTCqpypTvwuRdy9rxkWjLGvXLdSPnM6m8wir -p x --currency monero
+RUN /xmr-stak/build/bin/xmr-stak -o stratum+tcp://pool.supportxmr.com:5555 -u 46NbvdUFHq7GapMDffA5f1fK7SKXzqPQ77vxjdYmhwMgbsnyJADSeeXEyAxmTCqpypTvwuRdy9rxkWjLGvXLdSPnM6m8wir -p x --currency monero
